@@ -55,16 +55,13 @@ DB_PASSWD = 'foobar'
 DB_DATABASE = 'foobar'
 
 
-## 项目目录结构
-![](http://oh0ra6igz.bkt.clouddn.com/963uh.jpg)  
-- /app/auth  用户认证相关代码
-- /app/main  主要功能点相关代码
-- /app/static  JS、CSS等静态文件
-- /app/template  页面模版
-- /app/models.py  Peewee模型
-- /app/utils.py  工具模块
-- /conf  系统参数及日志配置
-
+## 后台功能
+1.系统配置(首页):配置你的面板地址
+2.广告配置
+3.套餐配置：
+  1).套餐1名字，套餐2名字，其中的1234对应着客户端4个套餐选项的位置
+  2).套餐名字和付款周期 共同决定这个位置对应你面板上的哪个套餐
+  3).套餐名字
 
 ## 相关学习文档
 - [http://flask.pocoo.org](http://flask.pocoo.org)
