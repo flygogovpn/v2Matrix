@@ -62,7 +62,9 @@ DB_DATABASE = 'foobar'
 - 3.套餐配置：
 -   1).套餐1名字，套餐2名字，其中的1234对应着客户端4个套餐选项的位置
 -   2).套餐名字和付款周期 共同决定这个位置对应你面板上的哪个套餐
--   3).套餐名字
+-   3).套餐名字需和你面板上的套餐名字一致，付款周期对应关系如下:月付：month_price 季付：quarter_price 半年付：half_year_price 年付：year_price 一次性：onetime_price
+![jj](https://user-images.githubusercontent.com/130766519/232080977-ea245a1a-46aa-485b-b5e6-8ae0bc8ce950.PNG)
+-   4).组名是为了容纳更多的套餐，其他配置可以理解为标注，在客户端前端仅做显示，是否匹配成功可查验前端对应套餐的价格是否一致
 
 ## 相关学习文档
 - [http://flask.pocoo.org](http://flask.pocoo.org)
