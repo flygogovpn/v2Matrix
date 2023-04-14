@@ -87,7 +87,9 @@ DB_DATABASE = 'foobar'
 ![后台套餐配置](https://user-images.githubusercontent.com/130766519/232076042-c911c3a2-867e-423a-8fc1-e88490bef449.JPG)
 
 ## 安卓截图
-![p1](https://user-images.githubusercontent.com/130766519/232085816-836ed13c-59bc-4984-b917-273dfd666a81.jpg)[p2](https://user-images.githubusercontent.com/130766519/232085848-8b6430a6-7fd1-44f3-b036-ec2ea10eb9f4.jpg)[p3](https://user-images.githubusercontent.com/130766519/232085874-842a3393-a348-4c31-8944-59ddc88d144b.jpg)
+
+<img src="(https://user-images.githubusercontent.com/130766519/232085874-842a3393-a348-4c31-8944-59ddc88d144b.jpg" width="200" height="200" alt="微信小程序"/><br/>
+
 
 
 
