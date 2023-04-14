@@ -1,61 +1,98 @@
-# v2Mtrix
-client for v2board 能够对接v2board的客户端，这里是后台源码
-环境：
-安装python2.7.13
-安装pip 9.0.1
+# flask-saas-platform
+## 简介
+flask-saas-platform是一个Python环境下的WEB后台管理系统脚手架，目标是用极少量的代码，快速构建小型WEB应用。请勿在大中型项目中进行尝试。  
 
-前期准备
-1.安装宝塔 https://www.hostcli.com/ 
-2.创建数据库
-  数据库名：foobar
-  用户名：foobar
-  密码：foobar
-3.导入数据库备份(见附件)
-4.安装python2.7
-  安装python2.7.13 (pip安装别用这里的)
-  https://blog.csdn.net/Auspicious_air/article/details/127800463
-  安装pip 9.0.1
-  https://blog.csdn.net/m0_72838865/article/details/126931672
-  
-部署安装
-1.安装flask依赖
-  pip install peewee
-  pip install flask
-  pip install flask-script
-  pip install flask-wtf  
-  pip install flask-login
-  pip install Flask-SQLAlchemy==2.1
-  pip install apscheduler
-  pip install PyJWT 
-  pip install jason
-  pip install --upgrade pip
-  pip install html
-  pip install requests
-  pip install pymysql
-2.系统文件替换
-  1)替换文件__init__.py，路径：/site-packages/flask_sqlalchemy/__init__.py
-  
-  2)替换文件impl.py，路径：/site-packages/sqlalchemy/pool/impl.py
-  
-  3)替换文件util.py，路径：/usr/lib/python2.7/site-packages/apscheduler
-  备注：具体路径是根据python的安装目录各有不同，可以在根目录搜索flask_sqlalchemy进行查找
- 
-3.打开端口：3306,5000(宝塔里设置一下)
+1. 使用较传统的重后端+轻前端的方式，降低总体代码量
+2. Web框架使用Flask，默认Jinja模版
+3. ORM框架使用Peewee
+4. 前端套用基于BootStrap的AdminLTE模板
 
-4.运行
-  打开指令窗口，进入到你工程路径下flask-saas-platform-main，运行python run_app_dev.py
-  首页：http://域名或服务器ip:5000/Fsystem_manage
-  账号：admin
-  密码：123qwe123
+## 系统截图
+- 登录页  
 
-其他
-1.修改数据库密码：flask-saas-platform-main/conf/config.py
-2.后台运行指令
-  nohup python run_app_dev.py &  运行程序
-  ps aux |grep python 查看后台进程
+
+- 主页  
+
+
+- 编辑界面  
+
+
+- 查询界面  
 
 
 
+## 第三方依赖
+- peewee
+- pymysql
+- flask
+- flask-script
+- flask-wtf
+- flask-login
 
 
+## 环境配置
+### venv虚拟环境安装配置
+```
+sudo pip3 install virtualenv
+virtualenv venv
+. venv/bin/activate
+```
+
+### 第三方依赖安装
+```
+pip3 install -r requirements.txt
+
+```
+### 系统参数配置
+1. 编辑`config.py`， 修改SECRET_KEY及MySQL数据库相关参数
+```
+SECRET_KEY = os.environ.get('SECRET_KEY') or 'your-secret'
+DB_HOST = '127.0.0.1'
+DB_USER = 'foobar'
+DB_PASSWD = 'foobar'
+DB_DATABASE = 'foobar'
+```
+
+2. 编辑log-app.conf，修改日志路径
+```
+args=('/path/to/log/flask-rest-sample.log','a','utf8')
+```
+
+### 数据库初始化
+1. 自动建表
+直接运行`python3 models.py`
+
+2. 插入管理员用户（默认admin/admin)
+```
+INSERT INTO `user` (`id`, `username`, `password`, `fullname`, `email`, `phone`, `status`)
+VALUES
+	(1, 'admin', 'pbkdf2:sha1:1000$Km1vdx3W$9aa07d3b79ab88aae53e45d26d0d4d4e097a6cd3', '管理员', 'admin@admin.com', '18612341234', 1);
+```
+
+### 启动应用
+```
+nohup ./manage.py runserver 2>&1 &
+或
+./run_app_dev.py (仅限测试)
+```
+
+
+## 项目目录结构
+![](http://oh0ra6igz.bkt.clouddn.com/963uh.jpg)  
+- /app/auth  用户认证相关代码
+- /app/main  主要功能点相关代码
+- /app/static  JS、CSS等静态文件
+- /app/template  页面模版
+- /app/models.py  Peewee模型
+- /app/utils.py  工具模块
+- /conf  系统参数及日志配置
+
+
+## 相关学习文档
+- [http://flask.pocoo.org](http://flask.pocoo.org)
+- [https://flask-login.readthedocs.io](https://flask-login.readthedocs.io)
+- [https://flask-script.readthedocs.io](https://flask-script.readthedocs.io)
+- [https://flask-wtf.readthedocs.io](https://flask-wtf.readthedocs.io)
+- [http://docs.peewee-orm.com](http://docs.peewee-orm.com)
+- [https://almsaeedstudio.com/preview](https://almsaeedstudio.com/preview)
 
