@@ -43,8 +43,7 @@
 ## 运行
 - 1.宝塔中打开端口：3306,5000
 - 2.进入到你工程路径下flask-saas-platform-main，运行python run_app_dev.py 或后台运行nohup python run_app_dev.py &   
--   查看后台进程指令：ps aux |grep python 
-  3.账号 admin 密码123qwe123
+- 3.账号 admin 密码123qwe123
   
   
   
