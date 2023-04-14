@@ -51,7 +51,7 @@
   
   
 ## 其他
-### 系统参数配置
+### 修改数据库密码
 ```
 编辑`config.py`， 修改SECRET_KEY及MySQL数据库相关参数
 SECRET_KEY = os.environ.get('SECRET_KEY') or 'your-secret'
