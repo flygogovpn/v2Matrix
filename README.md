@@ -35,12 +35,12 @@
 
 ## 系统文件替换
 - 1.替换文件__init__.py 路径：
--   python2.7/site-packages/flask_sqlalchemy/__init__.py	
+-   python2.7/site-packages/flask_sqlalchemy/ __init__.py	
 - 2.替换文件impl.py 路径：
--   python2.7/site-packages/sqlalchemy/pool/impl.py
+-   python2.7/site-packages/sqlalchemy/pool/ impl.py
 - 3.替换文件util.py 路径：
--   python2.7/site-packages/apscheduler/util.py
-- 4.python2.7/site-packages/playhouse/pool.py
+-   python2.7/site-packages/apscheduler/ util.py
+- 4.python2.7/site-packages/playhouse/ pool.py
       修改第73行：self._max_connections = make_int(2147483647) //把默认改到最大,这里就是改了一个数值
 - 备注：具体目录与python的安装目录有关，可以在根目录搜索flask_sqlalchemy，sqlalchemy，apscheduler进行查找。
   
