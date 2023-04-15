@@ -94,7 +94,8 @@ DB_DATABASE = 'foobar'
 ## 附件
 - 后台源码 [source.tar.gz](https://github.com/flygogovpn/v2Matrix/files/11234745/source.tar.gz)
 - 数据库模板 [foobar.zip](https://github.com/flygogovpn/v2Matrix/files/11239512/foobar.zip)
-- 系统文件替换 [system.zip](https://github.com/flygogovpn/v2Matrix/files/11234748/system.zip)
+- 系统文件替换 [system.zip](https://github.com/flygogovpn/v2Matrix/files/11239546/system.zip)
+
 
 
 
