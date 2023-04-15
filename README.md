@@ -11,7 +11,7 @@
 -   用户密码：foobar
 - 3.导入数据库文件(见附件sql)
 - 4.安装python2.7.13和pip9.0.1(centos可使用python项目管理器进行安装)
--   安装python2.7 (pip安装别用这里的)
+-   安装python2.7 (pip安装别用这里的)(文章中的“安装依赖的库”,那条yum的指令不用执行，跳过)
 -   https://blog.csdn.net/Auspicious_air/article/details/127800463
 -   安装pip 9.0.1
 -   https://blog.csdn.net/m0_72838865/article/details/126931672
