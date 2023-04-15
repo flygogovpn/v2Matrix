@@ -30,6 +30,8 @@
 - pip install html
 - pip install requests
 - pip install pymysql
+- pip install SQLAlchemy==1.3.0
+
 
 ## 系统文件替换
 - 1.替换文件__init__.py 路径：
@@ -38,12 +40,15 @@
 -   python2.7/site-packages/sqlalchemy/pool/impl.py
 - 3.替换文件util.py 路径：
 -   python2.7/site-packages/apscheduler/util.py
+- 4.python2.7/site-packages/playhouse/pool.py
+      修改第73行：self._max_connections = make_int(2147483647) //把默认改到最大,这里就是改了一个数值
 - 备注：具体目录与python的安装目录有关，可以在根目录搜索flask_sqlalchemy，sqlalchemy，apscheduler进行查找。
   
 ## 运行
 - 1.宝塔中打开端口：3306,5000
 - 2.进入到你工程路径下flask-saas-platform-main，运行python run_app_dev.py 或后台运行nohup python run_app_dev.py &   
-- 3.账号 admin 密码123qwe123
+- 3.首页：http://域名或服务器ip:5000/Fsystem_manage 这里有点问题，如果是退出账号的话，要重新输入首页才能登陆。如果密码怎么都不对，就把首页重新输入一遍
+- 4.账号 admin 密码123qwe123
   
   
   
