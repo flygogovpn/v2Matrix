@@ -17,6 +17,7 @@
 -   https://blog.csdn.net/m0_72838865/article/details/126931672
 
 ## 安装第三方依赖
+- pip install --upgrade pip
 - pip install peewee==3.16.0
 - pip install flask==1.1.4
 - pip install flask-script==2.0.6
@@ -26,7 +27,6 @@
 - pip install apscheduler==3.9.1.post1
 - pip install PyJWT==1.7.1
 - pip install jason
-- pip install --upgrade pip
 - pip install html==1.16
 - pip install requests==2.6.0
 - pip install pymysql==0.10.1
