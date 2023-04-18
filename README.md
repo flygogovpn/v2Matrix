@@ -15,6 +15,7 @@
 -   https://blog.csdn.net/Auspicious_air/article/details/127800463
 -   安装pip 9.0.1
 -   https://blog.csdn.net/m0_72838865/article/details/126931672
+- 备注：一定不要python2和python3同时存在，要用干净得系统，最好是centos7
 
 ## 安装第三方依赖
 - pip install --upgrade pip
@@ -50,10 +51,12 @@
 - 3.首页：http://域名或服务器ip:5000/Fsystem_manage 这里有点问题，如果是退出账号的话，要重新输入首页才能登陆。如果密码怎么都不对，就把首页重新输入一遍
 - 4.账号 admin 密码123qwe123
   
+## 视频教程
+  https://www.youtube.com/playlist?list=PLaf6tB_GEjEzW8s9FDyTxAXY86llYepLm
   
-  
-  
-  
+## 群友帮忙整理了一份教程可供参考 
+  [c7小白快速部署v2matrix教程.zip](https://github.com/flygogovpn/v2Matrix/files/11262081/c7.v2matrix.zip)
+
 ## 其他(非必要)
 ### 修改数据库密码
 ```
