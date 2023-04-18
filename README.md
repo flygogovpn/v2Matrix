@@ -125,7 +125,7 @@ DB_DATABASE = 'foobar'
 - 配置了备用域名，不会影响老用户。新用户会受到影响，不过对客户端重新新包即可。
 
 ## v2Matrix收费吗？
-- 免费的
+- 是免费的，如果需要更好的ui和体验，去别家看看吧
 
 ## v2Matrix客户端如何获取？
 - 进官方飞机群https://t.me/v2matrixshare
