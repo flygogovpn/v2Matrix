@@ -67,6 +67,17 @@ DB_USER = 'foobar'
 DB_PASSWD = 'foobar'
 DB_DATABASE = 'foobar'
 ```
+### 添加ssl证书支持https
+- 1.宝塔-网站页面，为你的域名申请ssl证书以后，点击设置找到配置文件(如下图)(域名建站的时候记得把你的端口也带上比如 www.v2mtext.com:5000)
+- 2.删除第三行，取消监听该端口 listen 5000;
+- 3.复制 ssl_certificate 和 ssl_certificate_key后面的路径
+- 4.添加到工程启动文件/flask-saas-platform-main/run_app_dev.py 中
+    app.run(debug=True,host="0.0.0.0",port=5000,
+      ssl_context=('/www/server/panel/vhost/cert/anal.canghaiyib.cn/fullchain.pem', '/www/server/panel/vhost/cert/anal.canghaiyib.cn/privkey.pem'))
+<img src="https://user-images.githubusercontent.com/130766519/233315517-cfcd83ca-fbdb-4a32-bad4-f935ed5d660c.png" width="300px">  <img src="https://user-images.githubusercontent.com/130766519/233318833-6e91a44d-f667-44cb-ad03-722d267a2bad.png" width="600px"> 
+ 
+
+
 
 ## 后台功能
 - 1.系统配置(首页):配置你的面板地址
