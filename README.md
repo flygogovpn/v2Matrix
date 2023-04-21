@@ -74,7 +74,7 @@ DB_DATABASE = 'foobar'
 - 4.添加到工程启动文件/flask-saas-platform-main/run_app_dev.py 中
     app.run(debug=True,host="0.0.0.0",port=5000,
       ssl_context=('/www/server/panel/vhost/cert/anal.canghaiyib.cn/fullchain.pem', '/www/server/panel/vhost/cert/anal.canghaiyib.cn/privkey.pem'))
-<img src="https://user-images.githubusercontent.com/130766519/233315517-cfcd83ca-fbdb-4a32-bad4-f935ed5d660c.png" width="300px">  <img src="https://user-images.githubusercontent.com/130766519/233320660-4fda751a-0b05-48ab-96c4-5903aee327da.png" width="600px"> 
+<img src="https://user-images.githubusercontent.com/130766519/233315517-cfcd83ca-fbdb-4a32-bad4-f935ed5d660c.png" width="300px">  <img src="https://user-images.githubusercontent.com/130766519/233320660-4fda751a-0b05-48ab-96c4-5903aee327da.png" width="400px"> 
  
 
 
