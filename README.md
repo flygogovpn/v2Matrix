@@ -47,7 +47,7 @@
   
 ## 运行
 - 1.宝塔中打开端口：3306,5000
-- 2.进入到你工程路径下flask-saas-platform-main，运行python run_app_dev.py 或后台运行nohup python run_app_dev.py &   
+- 2.上传源码并解压，进入到你工程路径下flask-saas-platform-main，运行python run_app_dev.py 或后台运行nohup python run_app_dev.py &   
 - 3.首页：http://域名或服务器ip:5000/Fsystem_manage 这里有点问题，如果是退出账号的话，要重新输入首页才能登陆。如果密码怎么都不对，就把首页重新输入一遍
 - 4.账号 admin 密码123qwe123
   
@@ -80,7 +80,7 @@ DB_DATABASE = 'foobar'
 
 
 ## 后台功能
-- 1.系统配置(首页):配置你的面板地址
+- 1.系统配置(首页):配置你的面板域名(例: http://www.mianban.com)
 - 2.广告配置
 - 3.套餐配置：
 -   1).套餐1名字，套餐2名字，其中的1234对应着客户端4个套餐选项的位置
