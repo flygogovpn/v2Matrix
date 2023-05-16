@@ -10,24 +10,31 @@
 -   数据库密码：foobar
 -   用户密码：foobar
 - 3.导入数据库文件(见附件sql)
-- 4.安装python2.7.13和pip9.0.1(centos可使用python项目管理器进行安装)
--   安装python2.7 (pip安装别用这里的)(文章中的“安装依赖的库”,那条yum的指令不用执行，跳过)
--   https://blog.csdn.net/Auspicious_air/article/details/127800463
--   安装pip 9.0.1
--   https://blog.csdn.net/m0_72838865/article/details/126931672
-- 备注：一定不要python2和python3同时存在，推荐使用Debian11
+- 4.安装python2.7
+
+
 - 5.安装git
 ```
-apt install git -year_price
+apt install git
 ```
 
 ## 下载项目
 ```
 git clone https://github.com/flygogovpn/v2Matrix
+cd v2Matrix
+```
+## 安装Python2.7
+```
+bash install_python27.sh
+```
+## 安装pip9.0.1
+```
+bash install_pip901.sh
 ```
 ## 安装第三方依赖
 ```
 pip install --upgrade pip
+
 pip install -r requirement.txt
 ```
 
