@@ -15,24 +15,21 @@
 -   https://blog.csdn.net/Auspicious_air/article/details/127800463
 -   安装pip 9.0.1
 -   https://blog.csdn.net/m0_72838865/article/details/126931672
-- 备注：一定不要python2和python3同时存在，要用干净得系统，最好是centos7
+- 备注：一定不要python2和python3同时存在，推荐使用Debian11
+- 5.安装git
+```
+apt install git -year_price
+```
 
+## 下载项目
+```
+git clone https://github.com/flygogovpn/v2Matrix
+```
 ## 安装第三方依赖
-- pip install --upgrade pip
-- pip install peewee==3.16.0
-- pip install flask==1.1.4
-- pip install flask-script==2.0.6
-- pip install flask-wtf==0.14.3  
-- pip install flask-login==0.5.0
-- pip install Flask-SQLAlchemy==2.1
-- pip install apscheduler==3.9.1.post1
-- pip install PyJWT==1.7.1
-- pip install jason
-- pip install html==1.16
-- pip install requests==2.6.0
-- pip install pymysql==0.10.1
-- pip install SQLAlchemy==1.3.0
-
+```
+pip install --upgrade pip
+pip install -r requirement.txt
+```
 
 ## 系统文件替换(文章末尾处下载)
 - 1.替换文件__init__.py 路径：
