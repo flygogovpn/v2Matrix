@@ -1,5 +1,5 @@
 # v2Matrix
- ## 后记 大家反应后台太难搞了，虽然做了教程。所以搞了无后台版本大家可自行去打包，5分钟搞定，www.v2matrix.com 遇到问题可以进官方群进行咨询
+ ## 后记 大家反应后台太难搞了，虽然做了教程。所以搞了无后台版本大家可自行去打包编译，5分钟搞定，编译地址：www.v2matrix.com 遇到问题可以进官方群进行咨询
  ## 快捷获取v2board客户端官网 ：www.v2matrix.com
  ## v2matrix官方飞机群 ：https://t.me/v2matrixshare
  
