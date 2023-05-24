@@ -63,9 +63,9 @@
 编辑`config.py`， 修改SECRET_KEY及MySQL数据库相关参数
 SECRET_KEY = os.environ.get('SECRET_KEY') or 'your-secret'
 DB_HOST = '127.0.0.1'
-DB_USER = 'foobar'
-DB_PASSWD = 'foobar'
-DB_DATABASE = 'foobar'
+DB_USER = 'faba'
+DB_PASSWD = '!QAZ2wsx3edc'
+DB_DATABASE = '!QAZ2wsx3edc'
 ```
 ### 添加ssl证书支持https
 - 1.宝塔-网站页面，为你的域名申请ssl证书以后，点击设置找到配置文件(如下图)(域名建站的时候记得把你的端口也带上比如 www.v2mtext.com:5000)
