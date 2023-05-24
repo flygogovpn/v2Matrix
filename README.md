@@ -117,8 +117,6 @@ DB_DATABASE = '!QAZ2wsx3edc'
 <img src="https://user-images.githubusercontent.com/130766519/232096081-4eec96aa-6bbc-4afb-afc9-f7eb3fc871d8.JPG" width="600px">
 
 ## 附件
-- 后台源码 [source.tar.gz](https://github.com/flygogovpn/v2Matrix/files/11234745/source.tar.gz)
-- 数据库模板 [foobar.zip](https://github.com/flygogovpn/v2Matrix/files/11258701/foobar.zip)
 - 系统文件替换 [system.zip](https://github.com/flygogovpn/v2Matrix/files/11239546/system.zip)
 
 
