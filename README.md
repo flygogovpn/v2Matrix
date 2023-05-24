@@ -1,5 +1,10 @@
 # v2Matrix(大家反应后台太难搞了，虽然做了教程。所以搞了无后台版本大家可自行去打包，5分钟搞定，www.v2matrix.com 遇到问题可以进官方群进行咨询
  https://t.me/v2matrixshare
+ 
+ ## 快捷获取v2board客户端官网 ：www.v2matrix.com
+ ## v2matrix官方飞机群 ：https://t.me/v2matrixshare
+ 
+ 
 ## 简介
 - v2Matrix是一个能够对接v2board后台的简易客户端，相对传统工具来讲，能够直接登录注册，支付订阅，解决了用户留不下，工具无法直接变现的问题  
 - 目前仅开放基础版，处于公测阶段，拿出来免费给大家用，这里是后台的源码和部署教程，完成后台部署后，可进入飞机群https://t.me/v2matrixshare ，拿安卓和windows的客户端
