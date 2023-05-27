@@ -1,0 +1,25 @@
+
+			.nav ul li {
+				display: inline;
+				list-style: none;
+			}
+
+			.nav ul li{
+				border: 1px solid solid;
+				margin: 14px;
+			    text-decoration: none;
+			    font-size: 20px;
+			    padding-bottom: 10px;
+			}
+			.navClicked{
+				font-weight: bold;
+				color: #c61919;
+				border-bottom: 3px solid #c61919;
+				cursor: pointer;
+			}
+
+			.nav ul li:hover {
+				font-weight: bold;
+				color: #c61919;
+				cursor: pointer;
+			}

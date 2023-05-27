@@ -1,0 +1,133 @@
+
+html {
+	color: #000;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,select,p,blockquote,th,td{
+	margin: 0;
+	padding: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	display: block;
+}
+
+body {
+	color: #333;
+	font: 12px tahoma, arial, \5b8b\4f53;
+}
+
+input,select,textarea {
+	font-size: 100%;
+}
+
+fieldset,img {
+	border: 0;
+	font-family: Tahoma;
+	vertical-align: middle;
+}
+
+button {
+	border: 0;
+	background:transparent;
+	cursor:pointer;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+ins,a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+caption,th {
+	text-align: left;
+}
+
+q:before,q:after {
+	content: '';
+}
+
+abbr,acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: baseline;
+}
+
+sub {
+	vertical-align: baseline;
+}
+
+/* because legend doesn't inherit in IE */
+legend {
+	color: #000;
+}
+
+/* clear element float */
+.cf:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.cf { *zoom: 1; } /* for IE6 IE7 */
+
+/* float element */
+.fl { float: left; }
+.fr { float: right; }
+.fl,.fr { _display: inline; } /* for IE6 */
+
+/* text align */
+.tl { text-align: left; }
+.tr { text-align: right; }
+.tc { text-align: center; }
+
+/* validator tip */
+.tip {
+	display:inline-block;
+	margin-left:10px;
+	line-height:22px;
+}
+
+/* display */
+.show { display:block; }
+.hide { display:none; }
+.inline{ display:inline; }
+.ib{ display: inline-block; }
+
+/* page common style */
+#footer {
+    color: #666666;
+    padding-top: 20px;
+    text-align: center;
+	line-height: 30px;
+}
+.footer-info {
+    text-align: center;
+}
+.footer-info a {
+    color: #666666;
+}
+
+/* fix the "while one input,enter key refresh the page" bug */
+.help-input{
+	border:none;
+	width:0;
+	height:0;
+	background:transparent; /*	for ie7  */
+}

@@ -1,0 +1,267 @@
+
+
+{% extends "base.html" %}
+
+{% block title %}FlyGoShare{% endblock %}
+
+{% block navbar %}
+<section class="content-header">
+
+    <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard"></i> 当前位置</li>
+        <li class="active">Bug</li>
+    </ol>
+</section>
+{% endblock %}
+
+{% block content %}
+<div class="box-body">
+        <div class="row">
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-aqua">
+                    <div class="inner">
+                        {% block data_lastday_android %}
+                        <h4 >安卓昨日打开次数 {{ data_lastday_android }}</h4>
+                        <h4>安卓今日打开次数 {{ data_today_android }}</h4>
+                        {% endblock %}
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-ios-gear-outline"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                        {% block data_today_pc %}
+                        <h4 >pc昨日打开次数 {{ data_lastday_pc }}</h4>
+                        <h4>pc卓今日打开次数 {{ data_today_pc }}</h4>
+                        {% endblock %}
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-iphone"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-yellow">
+                    <div class="inner">
+                        {% block data_lastday_ios %}
+                        <h4 >ios昨日打开次数 {{ data_lastday_ios }}</h4>
+                        <h4>ios卓今日打开次数 {{ data_today_ios }}</h4>
+                        {% endblock %}
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-person-add"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-red">
+                    <div class="inner">
+                        {% block data_lastday_mac %}
+                        <h4 >mac昨日打开次数 {{ data_lastday_mac }}</h4>
+                        <h4>mac卓今日打开次数 {{ data_today_mac }}</h4>
+                        {% endblock %}
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-pie-graph"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div  class="panel-body" style="height: 900px; overflow:scroll">
+		<div class="span12">
+
+			<table class="table table-striped table-hover">
+				<thead>
+					<tr>
+                        <th>
+							配置项
+						</th>
+                        <th>
+							配置项说明
+						</th>
+                        <th  >
+							配置内容
+						</th>
+						<th>
+							操作
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+                    {% for i in content %}
+                        <tr>
+                            <td>{{ i.config_title }}</td>
+                            <td>{{ i.config_explanation }}</td>
+                            <td style=" word-wrap:break-word;word-break:break-all;overflow: hidden;width: 800px ">{{ i.config_content }}</td>
+
+
+                            <td>
+                                <button id= "{{ i.id }}" value="{{ i.id }}" onclick="javascript:button_onclick({{ i.id }});">编辑</button>
+                                <script>
+
+
+                                $(function() {
+                                    $('#{{ i.id }}').on('click', function() {
+                                        //var bt_id = document.getElementById("bt");//获取按钮id
+                                        var bt_id = '{{ i.id }}'
+                                        data_tmp = { 'text':" data to send to server id=", 'ID':bt_id};    // data to send to server.
+                                        $.post('/user_manage_show', data_tmp, function(data){
+
+
+
+                                            var id_config_title = document.getElementById("id_config_title");
+                                            var id_config_explanation = document.getElementById("id_config_explanation");
+                                            var id_config_content = document.getElementById("id_config_content");
+
+
+
+                                            var obj = eval ("(" + data + ")");//读取json格式的数据
+
+
+
+                                            id_config_title.value = obj.config_title
+                                            id_config_explanation.value = obj.config_explanation
+                                            id_config_content.value = obj.config_content
+
+                                        });  //https://www.runoob.com/jquery/ajax-post.html 函数解释
+                                    })
+                                })
+
+                                function button_onclick(row_id){
+                                    //alert("这是调用函数"); //这里写你要执行的语句
+                                    var sum1 = 10;
+                                    var form_edit=document.getElementsByClassName("form_edit_small");
+                                    form_edit[0].className="form_edit_small open";//打开编辑框
+                                    var id_row_edit = document.getElementById("id_row_edit");//赋值给填写的id 输入框
+                                    id_row_edit.value = row_id
+                                    console.log(id_row_edit.value,row_id);
+                                }
+
+                                </script>
+
+
+                                <div class="form_edit_small">
+                                    <form  action="user_manage_data_edit" method="post" enctype="multipart/form-data" >
+                                        <div class="input_1"><div class="login_logo">修改</div><div class="close">X</div></div>
+                                         <div class="input_1">
+                                                <label for="id" style="display:none">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp id &nbsp</label><input style="display:none" type="text" name="id" id= 'id_row_edit'  placeholder="&nbsp;input id">
+                                             <div>
+                                                 <label for="config_title"> 配置项 &nbsp&nbsp&nbsp</label><input type="text" name="config_title" id= 'id_config_title' readonly placeholder="&nbsp;input 配置项">
+                                             </div>
+                                             <div style="margin-top:16px">
+                                             <label for="config_explanation"> 配置说明 &nbsp</label><input type="text" name="config_explanation" id= 'id_config_explanation' readonly placeholder="&nbsp;input 配置项说明">
+                                             </div>
+                                             <div style="margin-top:16px">
+                                             <label for="config_content"> 配置内容 &nbsp</label><input type="text" name="config_content" id= 'id_config_content'  placeholder="&nbsp;input 配置内容">
+                                             </div>
+                                             <link href="../../static/css/common.css" rel="stylesheet" type="text/css">
+                                            </div>
+                                        <div class="input_1" style="margin-top:32px"><label for="id"> </label><input class="submit_1" type="submit" value="提&nbsp;交"></div>
+                                    </form>
+
+
+
+                                </div>
+
+
+
+                            </td>
+                        </tr>
+                    {% endfor %}
+				</tbody>
+			</table>
+                <script type="text/javascript" src="../../static/js/js_rent_function.js"></script><!-- 111 -->
+                <link href="../../static/css/css_rent_function.css" rel="stylesheet" type="text/css">
+
+{#        <div class="box-footer">#}
+{#            <div class="alert alert-info alert-dismissible">#}
+{#                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>#}
+{#                <h4><i class="icon fa fa-info"></i> 温馨提示</h4>#}
+{#                <ol>#}
+{#                    <li>软件测试就是贯穿整个软件开发生命周期，对软件产品（包括阶段性产品）进行验证（Verification）和确认（Validation）的活动过程，是证伪，而不是证真。</li>#}
+{#                    <li>测试最终目的是尽快尽早地发现在软件中的缺陷，通过修正各种错误和缺陷提高软件质量，回避软件发布后潜在软件缺陷和错误造成的隐患所带来商业风险。</li>#}
+{#                </ol>#}
+{#            </div>#}
+{#        </div>#}
+
+		</div>
+  <!-- 分页开始 -->
+         {% if paginate %}
+        <ul class="pagination pagination-sm no-margin pull-right">
+
+        <li><a href="/system_manage?page=1">首页</a></li>
+        {% if paginate.has_prev %}
+           <li class="active"><a href="/system_manage?page={{ paginate.prev_num }}">上一页</a></li>
+        {% else %}
+           <li class="disabled"><a href="">上一页</a></li>
+        {% endif %}
+
+        {% for v in paginate.iter_pages(1,1,3,1) %}   <!--iter_pages 是一个迭代器 返回分页栏上的页码数 如果显示不下 返回None-->
+           {% if v %}                                              <!--iter_pages(left_edge=2,left_current=2,right_current=5,right_edge=2)里面默认参数，左边边缘显示2个，右边边缘显示2个，当前页码左边显示2个，当前页码右边显示5个-->
+              {% if v==paginate.page %}
+                 <li class="active"><a href="#">{{ v }}</a></li>    <!--显示当前页数-->
+              {% else %}
+                 <li><a href="/system_manage?page={{ v }}">{{v}}</a></li>   <!--显示除当前页数的其他页数-->
+              {% endif %}
+           {% else %}
+              <li class="disabled"><a href="">&hellip;</a></li>    <!--把显示None变成省略号-->
+           {% endif %}
+        {% endfor %}
+
+        {% if paginate.has_next %}
+           <li class="active" ><a href="/system_manage?page={{ paginate.next_num }}">下一页</a></li>
+        {% else %}
+           <li class="disabled"><a href="">下一页</a></li>
+        {% endif %}
+
+           <li><a href="/system_manage?page={{ paginate.pages  }}">尾页</a></li>
+        </ul>
+        {% endif %}
+        <!-- 分页结束 -->
+    </div>
+<script>
+window.onload=function(){
+	var close=document.getElementsByClassName("close");
+	var form_edit_small=document.getElementsByClassName("form_edit_small");
+	close[0].addEventListener('click',function(){
+		form_edit_small[0].className="form_edit_small";
+	})
+}
+</script>
+</div>
+</div>
+{% endblock %}
+<style type="text/css">
+.file_bu {
+  position: relative;
+  display: inline-block;
+  background: #D0EEFF;
+  border: 1px solid #99D3F5;
+  border-radius: 4px;
+  padding: 4px 12px;
+  overflow: hidden;
+  color: #1E88C7;
+  text-decoration: none;
+  text-indent: 0;
+  line-height: 20px;
+  margin-left: 15px;}
+
+.file_bu input {
+  position: absolute;
+  font-size: 100px;
+  right: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.file_bu:hover {
+  background: #AADFFD;
+  border-color: #78C3F3;
+  color: #004974;
+  text-decoration: none;
+}
+</style>

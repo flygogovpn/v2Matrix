@@ -15,29 +15,33 @@
 -   数据库密码：foobar
 -   用户密码：foobar
 - 3.导入数据库文件(见附件sql)
-- 4.安装python2.7.13和pip9.0.1(centos可使用python项目管理器进行安装)
--   安装python2.7 (pip安装别用这里的)(文章中的“安装依赖的库”,那条yum的指令不用执行，跳过)
--   https://blog.csdn.net/Auspicious_air/article/details/127800463
--   安装pip 9.0.1
--   https://blog.csdn.net/m0_72838865/article/details/126931672
-- 备注：一定不要python2和python3同时存在，要用干净得系统，最好是centos7
+- 4.安装python2.7
 
+
+- 5.安装git
+```
+apt install git
+```
+
+## 下载项目
+```
+git clone https://github.com/flygogovpn/v2Matrix
+cd v2Matrix
+```
+## 安装Python2.7
+```
+bash install_python27.sh
+```
+## 安装pip9.0.1
+```
+bash install_pip901.sh
+```
 ## 安装第三方依赖
-- pip install --upgrade pip
-- pip install peewee==3.16.0
-- pip install flask==1.1.4
-- pip install flask-script==2.0.6
-- pip install flask-wtf==0.14.3  
-- pip install flask-login==0.5.0
-- pip install Flask-SQLAlchemy==2.1
-- pip install apscheduler==3.9.1.post1
-- pip install PyJWT==1.7.1
-- pip install jason
-- pip install html==1.16
-- pip install requests==2.6.0
-- pip install pymysql==0.10.1
-- pip install SQLAlchemy==1.3.0
+```
+pip install --upgrade pip
 
+pip install -r requirement.txt
+```
 
 ## 系统文件替换(文章末尾处下载)
 - 1.替换文件__init__.py 路径：

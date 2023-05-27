@@ -1,0 +1,401 @@
+body{
+	margin: 0,0,0,0;
+	overflow: hidden;
+}
+.main{
+	margin: 0,0,0,0;
+	overflow: hidden;
+}
+button{
+	width:70px;
+	height:30px;
+	font-size: 10px;
+	background-color:#51bf77 ;
+	color: white;
+	border:none;
+	border-radius: 10px;
+	margin-top: 5px;
+}
+.form_edit_customer{
+	width:1200px;
+	height:600px;
+	border:3px solid #f8f8f8;
+	visibility: hidden;
+	position: absolute;
+	z-index: 999;
+	opacity: 1;
+	overflow: hidden;
+	background-color: white;
+	text-align: center;
+	left:10%;
+	top:3%;
+	border-radius: 10px;
+}
+.form_edit{
+	width:1200px;
+	height:800px;
+	border:3px solid #f8f8f8;
+	visibility: hidden;
+	position: absolute;
+	z-index: 999;
+	opacity: 1;
+	overflow: hidden;
+	background-color: white;
+	text-align: center;
+	left:10%;
+	top:10%;
+	border-radius: 10px;
+}
+.form_edit_small{
+	width:400px;
+	height:300px;
+	border:3px solid #f8f8f8;
+	visibility: hidden;
+	position: absolute;
+	z-index: 999;
+	opacity: 1;
+	overflow: hidden;
+	background-color: white;
+	text-align: center;
+	left:40%;
+	top:20%;
+
+	border-radius: 10px;
+}
+.form_edit_middle{
+	width:400px;
+	height:340px;
+	border:3px solid #f8f8f8;
+	visibility: hidden;
+	position: absolute;
+	z-index: 999;
+	opacity: 1;
+	overflow: hidden;
+	background-color: white;
+	text-align: center;
+	left:40%;
+	top:20%;
+
+	border-radius: 10px;
+}
+
+.form_contract_pic_upload{
+	width:1200px;
+	height:800px;
+	border:3px solid #f8f8f8;
+	visibility: hidden;
+	position: absolute;
+	z-index: 999;
+	opacity: 1;
+	overflow: hidden;
+	background-color: white;
+	text-align: center;
+	border-radius: 10px;
+	left:10%;
+	top:10%;
+}
+.form_del{
+	width:400px;
+	height:200px;
+	border:3px solid #f8f8f8;
+	visibility: hidden;
+	position: absolute;
+	z-index: 999;
+	opacity: 1;
+	overflow: hidden;
+	background-color: white;
+	text-align: center;
+	left:40%;
+	top:40%;
+	border-radius: 10px;
+}
+.form_add{
+	width:1200px;
+	height:800px;
+	border:3px solid #f8f8f8;
+	visibility: hidden;
+	position: absolute;
+	z-index: 999;
+	opacity: 1;
+	overflow: hidden;
+	background-color: white;
+	text-align: center;
+	border-radius: 10px;
+	left:10%;
+	top:10%;
+}
+.form_pic_upload_customer{
+	width:800px;
+	height:800px;
+	border:3px solid #f8f8f8;
+	visibility: hidden;
+	position: absolute;
+	z-index: 999;
+	opacity: 1;
+	overflow: hidden;
+	background-color: white;
+	text-align: center;
+	border-radius: 10px;
+	left:30%;
+	top:3%;
+}
+
+.form_pic_upload{
+	width:1200px;
+	height:800px;
+	border:3px solid #f8f8f8;
+	visibility: hidden;
+	position: absolute;
+	z-index: 999;
+	opacity: 1;
+	overflow: hidden;
+	background-color: white;
+	text-align: center;
+	border-radius: 10px;
+	left:10%;
+	top:10%;
+}
+.form_add_small{
+	width:800px;
+	height:800px;
+	border:3px solid #f8f8f8;
+	visibility: hidden;
+	position: absolute;
+	z-index: 999;
+	opacity: 1;
+	overflow: hidden;
+	background-color: white;
+	text-align: center;
+	border-radius: 10px;
+	left:10%;
+	top:10%;
+}
+.open{
+	visibility: visible;
+	opacity: 1;
+}
+
+.input_1{
+	margin-top: 8px;
+	width:100%;
+	height:40px;
+	display:inline-block;
+}
+.outer_input
+{
+	margin-top: 6px;
+    width:50%;
+    text-align: center;
+}
+.input_short_left{
+	margin-top: 6px;
+	width:650px;
+	height:30px;
+	border-radius: 5px;
+	border:1px solid  #e5dfdf;
+
+}
+.input_short_right{
+	margin-top: 15px;
+	width:40%;
+	height:40px;
+	display:inline-block;
+	float:right;
+}
+input{
+	width:280px;
+	height:30px;
+	border-radius: 5px;
+	border:1px solid  #e5dfdf;
+}
+.input_1 .login_logo{
+	text-align: left;
+	font-size: 20px;
+	font-weight: 300;
+	padding-left: 30px;
+	float: left;
+}
+.input_1 .close{
+	width:20px;
+	height:20px;
+	color:#5d5d5d;
+	text-align: center;
+	line-height: 20px;
+	border:1px solid  #5d5d5d;
+	border-radius: 50%;
+	float: right;
+	padding-top: 0px;
+	margin-right: 10px;
+	font-size: 12px;
+}
+.input_1 .close:hover{
+	cursor:pointer;
+}
+hr{
+	background-color: #F8F8F8;
+}
+
+.input_1 .submit_1{
+	border:2px solid #f88020;
+	height:40px;
+	background-color: white;
+}
+.input_1 .submit_1:hover{
+	background-color: #f88020;
+	color:white;
+}
+.test{
+	overflow: hidden;
+}
+#btn_2{
+	background-color: #F88020;
+}
+.dialog{
+	width:300px;
+	height:120px;
+	border:2px solid #46b3e6;
+	overflow: hidden;
+	visibility: hidden;
+	z-index: 999;
+	overflow: hidden;
+	opacity: 1;
+	position: absolute;
+	background-color: white;
+	margin-top: 5%;
+	margin-left: 40%;
+}
+.dialog .title{
+	text-align: center;
+	font-size: 20px;
+	font-weight: 300;
+	margin-top: 28px;
+	margin-bottom: 25px;
+}
+.dialog  .btn_2{
+	width:50%;
+	height:40px;
+	float:left;
+	background-color: #dff6f0;
+	line-height: 40px;
+	color: black;
+	text-align: center;
+	margin-bottom: 0px;
+}
+.dialog .btn_2:hover{
+	background-color:#F88020 ;
+}
+.dialog  .close_1{
+	overflow: hidden;
+	width:100%;
+	height:40px;
+	background-color: green;
+	margin-bottom: 0px;
+	line-height: 40px;
+	color: white;
+	text-align: center;
+}
+.dialog .close_1:hover{
+	background-color: #f4f4f4;
+	color:red;
+	cursor: cell;
+}
+
+.left{
+	 float:left;
+}
+.right{
+	 float:right;
+}
+ .checkboxFour {
+    width: 10px;
+    height: 10px;
+    background: #ddd;
+    margin: 15px 45px;
+
+    border-radius: 100%;
+    position: relative;
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}
+.checkboxFour label {
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 20px;
+
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: 1;
+
+    background: #333;
+
+    -webkit-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+    box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+}
+.checkboxFour input[type=checkbox]:checked + label {
+    background: #26ca28;
+}
+
+
+
+	.select {
+		display: inline-block;
+		width: 200px;
+		height: 30px;
+		position: relative;
+		vertical-align: middle;
+		padding: 0;
+		overflow: hidden;
+		background-color: #fff;
+		color: #555;
+		border: 1px solid #aaa;
+		text-shadow: none;
+		border-radius: 4px;
+		transition: box-shadow 0.25s ease;
+		z-index: 2;
+		margin-top: 1px;
+	}
+
+	.select:hover {
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+	}
+
+	.select:before {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		border: 10px solid transparent;
+		border-top-color: #ccc;
+		top: 14px;
+		right: 10px;
+		cursor: pointer;
+		z-index: -2;
+	}
+	.select select {
+		cursor: pointer;
+		padding: 10px;
+		width: 100%;
+		border: none;
+		background: transparent;
+		background-image: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+	}
+
+	.select select:focus {
+		outline: none;
+	}
+   .content_center{
+		background: #66a05c;
+		text-align: center;
+	}
